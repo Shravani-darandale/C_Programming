@@ -1,5 +1,5 @@
 //Input : 5
-//Output :A B C D E
+//Output :# 1 * # 2 * # 3 *  # 4 *
 
 #include<stdio.h>
 
@@ -7,9 +7,11 @@ void pattern(int iNo)
 {
     int iCnt = 0;
     
-    for(iCnt = 0; iCnt < iNo; iCnt++)
+    for(iCnt = 1; iCnt <= iNo; iCnt++)
     {
-        printf("%c",'A'+ iCnt);
+        {
+            printf(" #   %d  *",iCnt);
+        }
     }
 
 }
@@ -18,7 +20,7 @@ int main()
     int iValue = 0;
 
     printf("Enter number of elements :");
-    scanf("%d %d", &iValue);
+    scanf("%d", &iValue);
 
     pattern(iValue);
 
