@@ -9,7 +9,7 @@
 //  Function Name:  Pattern 
 //  Description:    It is used to print patterns on screen
 //  Input:          Integer
-//  Output:         1 * 2 * 3 * 4 * 5 *
+//  Output:         1 #  2 # 3 # 4 # 5 #
 //  Author:         Shravani Kishor Darandale
 //  Date:           021/11/2025
 //
@@ -49,8 +49,9 @@ int main()
 
 //  Input1:5    
 // 
-//  Output : 1 * 2 * 3 * 4 * 5 *
+//  Output : 1 #  2 # 3 # 4 # 5 #
 //
 ////////////////////////////////////////////////////////////////////////
+
 
 
