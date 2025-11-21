@@ -1,9 +1,9 @@
 /*
 Input : iRow=3   iCol=4
-Output:  *  *  *
-         *  *  *
-         *  *  *
-         *  *  *
+Output: 
+    * # * #
+    * # * #
+    * # * #
 */
 
 #include<Stdio.h>
@@ -14,9 +14,17 @@ void Pattern(int iRow , int iCol)
 
     for(i=1; i<=iRow; i++)
     {
-        for(j=1; j<=iCol ; j++)
+        for(j=iCol; j>=1; j--)
         {
-            printf(" * ");
+            if(j % 2 == 0)
+            {
+                printf(" # ");
+            }
+             
+            else 
+            {
+                printf(" * ");
+            }
         }
         printf("\n");
     }
