@@ -8,10 +8,10 @@
 #include<stdio.h>
 ////////////////////////////////////////////////////////////////////////
 //
-//  Function Name:  AdditionTwoNumbers   
-//  Description:    It is used to perform addition
-//  Input:          Integer Integer
-//  Output:         Integer
+//  Function Name:  Pattern  
+//  Description:    It is used to print pattern on screen
+//  Input:          Integer 
+//  Output:          A B C D E
 //  Author:         Shravani Kishor Darandale
 //  Date:           021/11/2025
 //
@@ -51,3 +51,4 @@ int main()
 //  Output : A B C D E
 
 ////////////////////////////////////////////////////////////////////////
+
