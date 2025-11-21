@@ -6,7 +6,7 @@
 #include<stdio.h>
 ////////////////////////////////////////////////////////////////////////
 //
-//  Function Name:  PatternPrinting  
+//  Function Name:  Pattern 
 //  Description:    It is used to print patterns on screen
 //  Input:          Integer
 //  Output:         1 * 2 * 3 * 4 * 5 *
