@@ -1,10 +1,10 @@
 /*
 Input : iRow=4  iCol=4
 Output: 
-1   2   3   4
-5   6   7   8
-9   1   2   3
-4   5   6   7 
+2   4  6  8  10
+1   3  5  7   9
+2   4  6  8  10
+1   3  5  7   9
 */
 
 #include<Stdio.h>
@@ -16,16 +16,18 @@ void Pattern(int iRow , int iCol)
 
     for(i=1; i <=iRow; i++)
     {
-        for(j=1; j<=iCol; j++)
-        { 
-           printf(" %d " ,iCount);
-           iCount++;
-
-           if(iCount > 9)
+        if(i % 2 == 0)
            {
               iCount = 1;
-
            }
+           else 
+           {
+             iCount = 2;
+           }
+        for(j=1; j<=iCol; j++)
+        { 
+            printf(" %d ",iCount);
+            iCount +=2;
         }
          printf("\n");
            
