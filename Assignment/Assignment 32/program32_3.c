@@ -1,9 +1,11 @@
 /*
 Input : iRow = 4   iCol = 4
-*  *  *  #
-*  *  #  *
-*  #  *  *
-#  *  *  *
+* * * * * *
+*         *
+*         *
+*         *
+*          *
+* * * * * *
 
 */
 
@@ -33,7 +35,7 @@ void Pattern(int iRow , int iCol)
         {
             if(i == j)
             {
-                printf("#\t");
+                printf("*\t");
             }
 
             else
