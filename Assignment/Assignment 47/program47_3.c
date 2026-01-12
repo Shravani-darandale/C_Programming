@@ -121,14 +121,25 @@ int Count(PNODE first)
     return iCount;
 }
 
-void DisplayReverse(PNODE first)
+void SumDigits(PNODE first)
 {
-    if(first == NULL)
+    int no = 0;
+    int Sum = 0;
+
+    while(first != NULL)
     {
-        return;
+        no = first->data;
+        Sum = 0;
+
+        while(no != 0)
+        {
+            Sum = Sum + (no % 10);
+            no = no/10;
+        }
+
+        printf("Sum of Digits in %d = %d\n", first->data, Sum);
+        first = first->next;
     }
-    DisplayReverse(first->next);
-    printf("| %d |",first->data);
 }
 
 int main()
@@ -143,10 +154,9 @@ int main()
     InsertFirst(&head, 75);
     InsertLast(&head, 101);
 
-    Display(head);
 
-    printf("Reverse List:\n");
-    DisplayReverse(head);
-    printf("NULL\n");
+
+    printf("\nSum of Digits of Each Node:\n");
+    SumDigits(head);
     return 0;
 }

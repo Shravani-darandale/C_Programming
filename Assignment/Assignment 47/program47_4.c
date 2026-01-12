@@ -121,14 +121,33 @@ int Count(PNODE first)
     return iCount;
 }
 
-void DisplayReverse(PNODE first)
+void DisplayPrime(PNODE first)
 {
-    if(first == NULL)
+    int i = 0, flag = 0;
+
+    while(first != NULL)
     {
-        return;
+        if(first->data > 1)
+        {
+            flag = 1;
+            for(i = 2; i <= first->data / 2; i++)
+            {
+                if(first->data % i == 0)
+                {
+                    flag = 0;
+                    break;
+                }
+            }
+
+            if(flag == 1)
+            {
+                printf("%d ", first->data);
+            }
+        }
+        first = first->next;
     }
-    DisplayReverse(first->next);
-    printf("| %d |",first->data);
+    printf("\n");
+    
 }
 
 int main()
@@ -143,10 +162,9 @@ int main()
     InsertFirst(&head, 75);
     InsertLast(&head, 101);
 
-    Display(head);
+    printf("\nPrime Numbers in List:\n");
+    DisplayPrime(head);
 
-    printf("Reverse List:\n");
-    DisplayReverse(head);
-    printf("NULL\n");
+    
     return 0;
 }

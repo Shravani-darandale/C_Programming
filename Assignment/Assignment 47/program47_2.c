@@ -121,14 +121,30 @@ int Count(PNODE first)
     return iCount;
 }
 
-void DisplayReverse(PNODE first)
+void CountDigits(PNODE first)
 {
-    if(first == NULL)
+    int no = 0;
+    int iCnt = 0;
+
+    while(first != NULL)
     {
-        return;
+        no = first->data;
+        iCnt = 0;
+
+        if(no == 0)
+        {
+            iCnt = 1;
+        }
+
+        while(no != 0)
+        {
+            iCnt++;
+            no = no/10;
+        }
+
+        printf("Digits in %d = %d\n", first->data, iCnt);
+        first = first->next;
     }
-    DisplayReverse(first->next);
-    printf("| %d |",first->data);
 }
 
 int main()
@@ -145,8 +161,7 @@ int main()
 
     Display(head);
 
-    printf("Reverse List:\n");
-    DisplayReverse(head);
-    printf("NULL\n");
+    printf("\nCount Digits of Each Node:\n");
+    CountDigits(head);
     return 0;
 }
