@@ -124,15 +124,15 @@ int Count(PNODE first)
     return iCount;
 }
 
-int ReplaceEven(PNODE first)
+int ReplaceOdd(PNODE first)
 {
   int iCount = 0;
   
   while(first != NULL)
   {
-    if((first->data) % 2 == 0) //To check even
+    if((first->data) % 2 != 0) 
     {
-        first->data = 0;    //replace 0
+        first->data = 1;    //replace 1
         iCount++;
     }
     first = first->next;

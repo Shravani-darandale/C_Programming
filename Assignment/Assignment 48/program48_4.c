@@ -124,18 +124,20 @@ int Count(PNODE first)
     return iCount;
 }
 
-int ReplaceEven(PNODE first)
+int DisplayEvenPosition(PNODE first)
 {
   int iCount = 0;
+  int iPos = 1;
   
   while(first != NULL)
   {
-    if((first->data) % 2 == 0) //To check even
+    if((first->data) % 2 != 0) 
     {
-        first->data = 0;    //replace 0
+        first->data = 0;
         iCount++;
     }
-    first = first->next;
+     first = first->next;
+     iPos++;  
   }
   return iCount;
 }
